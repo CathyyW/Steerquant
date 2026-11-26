@@ -1,0 +1,14 @@
+# LIBERO environment (use a separate environment for RoboCasa).
+-r requirements-base.txt
+numpy==1.26.4
+opencv-python==4.11.0.86
+opencv-python-headless==4.11.0.86
+-e git+https://github.com/Lifelong-Robot-Learning/LIBERO.git@8f1084e3132a39270c3a13ebe37270a43ece2a01#egg=libero
+robosuite==1.4.0
+mujoco==3.3.2
+bddl==1.0.1
+easydict
+cloudpickle
+gym==0.26.2
+draccus==0.11.5
+imageio[ffmpeg]

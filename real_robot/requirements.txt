@@ -1,0 +1,14 @@
+# Validated real-robot environment: Linux x86_64, CPython 3.10, CUDA 12.8.
+# FastWAM's pinned pyproject supplies its additional exact dependencies.
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.7.1+cu128
+torchvision==0.22.1+cu128
+numpy==1.26.4
+ninja==1.13.0
+PyYAML==6.0.3
+hydra-core==1.3.2
+omegaconf==2.3.0
+setuptools==82.0.1
+wheel==0.47.0
+pytest==9.1.1

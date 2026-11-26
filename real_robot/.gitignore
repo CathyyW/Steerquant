@@ -1,0 +1,12 @@
+checkpoints/*/deployment.pt
+!assets/text_embeds/pack/*.t5_len128.wan22ti2v5b.pt
+!assets/text_embeds/stack/*.t5_len128.wan22ti2v5b.pt
+third_party/cutlass/
+third_party/FastWAM/
+outputs/
+configs/*.local.yaml
+*.so
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/

@@ -1,0 +1,103 @@
+# Minimal inference-only train config for the FastWAMJoint pack-3 checkpoint
+# (checkpoint/pack_object/step_015000.pt).
+#
+# WAMPolicyClient only consumes `model` and `data.train.processor` plus
+# `data.train.context_len`; dataset/scheduler training sections are
+# intentionally omitted. Derived from the cluster-trained
+# checkpoints/10step_joint/config.yaml with:
+#   - task-specific paths removed; the public FastWAM package supplies code
+#   - /project/peilab/... cluster paths replaced by local checkpoint paths
+#   - spectral_plan dropped (the checkpoint payload carries no spectral keys)
+
+data:
+  train:
+    context_len: 128
+    processor:
+      _target_: fastwam.datasets.lerobot.processors.fastwam_processor.FastWAMProcessor
+      shape_meta:
+        images:
+          - key: cam_high
+            raw_shape: [3, 480, 640]
+            shape: [3, 240, 320]
+          - key: cam_left_wrist
+            raw_shape: [3, 480, 640]
+            shape: [3, 240, 320]
+          - key: cam_right_wrist
+            raw_shape: [3, 480, 640]
+            shape: [3, 240, 320]
+        action:
+          - key: default
+            raw_shape: 14
+            shape: 14
+        state:
+          - key: default
+            raw_shape: 14
+            shape: 14
+      num_obs_steps: 33
+      num_output_cameras: 3
+      action_output_dim: 14
+      proprio_output_dim: 14
+      action_state_transforms: null
+      use_stepwise_action_norm: false
+      norm_default_mode: z-score
+      norm_exception_mode: null
+      action_state_merger:
+        _target_: fastwam.datasets.lerobot.transforms.action_state_merger.ConcatLeftAlign
+      train_transforms: null
+      val_transforms: null
+
+model:
+  _target_: fastwam.runtime.create_fastwam_joint
+  model_id: ${oc.env:FASTWAM_WAN22_DIR}
+  tokenizer_model_id: ${oc.env:FASTWAM_WAN22_DIR}
+  tokenizer_max_len: 128
+  load_text_encoder: false
+  proprio_dim: 14
+  redirect_common_files: false
+  mot_checkpoint_mixed_attn: true
+  action_dit_pretrained_path: ${oc.env:FASTWAM_ACTION_DIT_PRETRAIN}
+  skip_dit_load_from_pretrain: false
+  video_dit_config:
+    has_image_input: false
+    patch_size: [1, 2, 2]
+    in_dim: 48
+    hidden_dim: 3072
+    ffn_dim: 14336
+    freq_dim: 256
+    text_dim: 4096
+    out_dim: 48
+    num_heads: 24
+    attn_head_dim: 128
+    num_layers: 30
+    eps: 1.0e-06
+    seperated_timestep: true
+    require_clip_embedding: false
+    require_vae_embedding: false
+    fuse_vae_embedding_in_latents: true
+    use_gradient_checkpointing: true
+    video_attention_mask_mode: first_frame_causal
+    action_conditioned: false
+    action_dim: 14
+    action_group_causal_mask_mode: group_diagonal
+  action_dit_config:
+    action_dim: 14
+    hidden_dim: 1024
+    ffn_dim: 4096
+    num_heads: 24
+    attn_head_dim: 128
+    num_layers: 30
+    text_dim: 4096
+    freq_dim: 256
+    eps: 1.0e-06
+    use_gradient_checkpointing: true
+  video_scheduler:
+    train_shift: 5.0
+    infer_shift: 5.0
+    num_train_timesteps: 1000
+  action_scheduler:
+    train_shift: 5.0
+    infer_shift: 5.0
+    num_train_timesteps: 1000
+  loss:
+    lambda_action: 1.0
+    lambda_video: 1.0

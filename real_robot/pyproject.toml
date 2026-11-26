@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastwam-steerquant"
+version = "0.1.0"
+description = "Packed W4A8 deployment runtime for SteerQuant real-robot evaluation"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "torch==2.7.1",
+  "torchvision==0.22.1",
+  "numpy==1.26.4",
+  "ninja==1.13.0",
+  "PyYAML==6.0.3",
+  "hydra-core==1.3.2",
+  "omegaconf==2.3.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[project.scripts]
+steerquant-inspect-real-checkpoint = "fastwam_steerquant.inspect:main"
+steerquant-serve-real-policy = "fastwam_steerquant.robot_async_server:main"
+steerquant-run-real-robot = "fastwam_steerquant.real_robot.run:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fastwam_steerquant = [
+  "kernels/w4a8/csrc/*.cpp",
+  "kernels/w4a8/csrc/*.cu",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

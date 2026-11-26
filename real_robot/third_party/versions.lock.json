@@ -1,0 +1,10 @@
+{
+  "fastwam": {
+    "url": "https://github.com/yuantianyuan01/FastWAM.git",
+    "commit": "45d8e1458921d83f8ad6cf9ce993d371208dabd0"
+  },
+  "cutlass": {
+    "url": "https://github.com/NVIDIA/cutlass.git",
+    "commit": "da5e086dab31d63815acafdac9a9c5893b1c69e2"
+  }
+}

@@ -1,0 +1,35 @@
+wam:
+  ckpt: checkpoints/stack_w4a8/deployment.pt
+  dataset_stats: assets/stats/stack/dataset_stats.json
+  train_config: configs/train_config_joint_stack3_infer.yaml
+  device: cuda:0
+  mixed_precision: bf16
+  prompt: Stack the three cups into a small tower.
+  context_cache: assets/text_embeds/stack/072dbf0aee70fe628914d55762f3732ffb939ec8e9af90d5f0b49117f4680b0e.t5_len128.wan22ti2v5b.pt
+  use_text_encoder: false
+  action_horizon: 32
+  num_inference_steps: 10
+  seed: 42
+  rand_device: cpu
+  num_video_frames: 9
+  version1:
+    enabled: false
+  quantization:
+    backend: cutlass_w4a8
+    task: stack
+    deployment_sha256: 833a84d13ca4d80c1c6e6cdd1e7b41ce4b53380aa01c7c8c794c73ba142e1912
+    fastwam_root: third_party/FastWAM
+    fastwam_revision: 45d8e1458921d83f8ad6cf9ce993d371208dabd0
+    cuda_graph: true
+    runtime_profile: configs/real_robot_w4a8_runtime.json
+    # Optional: reuse an already compiled extension instead of building it.
+    # extension: /absolute/path/to/fastwam_steerquant_cutlass_w4a8_sm89_shape_v3.so
+
+policy_server:
+  host: 127.0.0.1
+  port: 18765
+  authkey: ${oc.env:FASTWAM_AUTHKEY}
+
+runtime:
+  action_chunk_size: 32
+  rospy_rate: 40

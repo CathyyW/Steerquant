@@ -1,0 +1,250 @@
+{
+  "repo": "nvidia/RoboCasa-Cosmos-Policy",
+  "revision": "ac2507f51f0ea090fd10f7780947f6941dbbf1c7",
+  "files": [
+    {
+      "path": "success_only/dataset_statistics.json",
+      "size": 2314,
+      "lfs": null
+    },
+    {
+      "path": "success_only/dataset_statistics_post_norm.json",
+      "size": 2033,
+      "lfs": null
+    },
+    {
+      "path": "success_only/kitchen_coffee/CoffeePressButton/2024-04-25/demo_gentex_im128_randcams.hdf5",
+      "size": 2658198456,
+      "lfs": {
+        "size": 2658198456,
+        "sha256": "c776d1da39f5a3a2dc247e4e90dc124aba9517087941f7fa3811d62308aa335c",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_coffee/CoffeeServeMug/2024-05-01/demo_gentex_im128_randcams.hdf5",
+      "size": 6923961310,
+      "lfs": {
+        "size": 6923961310,
+        "sha256": "9e85fe3d7a793c3575196b56710f3f364a468d3914bc79453cc0e1bf3bc17107",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_coffee/CoffeeSetupMug/2024-04-25/demo_gentex_im128_randcams.hdf5",
+      "size": 5203910454,
+      "lfs": {
+        "size": 5203910454,
+        "sha256": "17071a003713dae46d785e2c83b06a541547d83f9149c81ad6857a52c4d87b69",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_doors/CloseDoubleDoor/2024-04-29/demo_gentex_im128_randcams.hdf5",
+      "size": 7823566698,
+      "lfs": {
+        "size": 7823566698,
+        "sha256": "98ca7226c682eac18dcca5b0f6d96c90dbb2d50a5863ca01808bba44c54f0284",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_doors/CloseSingleDoor/2024-04-24/demo_gentex_im128_randcams.hdf5",
+      "size": 5851476388,
+      "lfs": {
+        "size": 5851476388,
+        "sha256": "563617a9c2c189765da44f704c7d9cf9ab012a4ec66699e9176d84562f2ab862",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_doors/OpenDoubleDoor/2024-04-26/demo_gentex_im128_randcams.hdf5",
+      "size": 16514176553,
+      "lfs": {
+        "size": 16514176553,
+        "sha256": "1bfa336f351e50d73092eded49e5a03c1a589ae03a65b5508be9e3668f9b69c7",
+        "pointer_size": 136
+      }
+    },
+    {
+      "path": "success_only/kitchen_doors/OpenSingleDoor/2024-04-24/demo_gentex_im128_randcams.hdf5",
+      "size": 6307154300,
+      "lfs": {
+        "size": 6307154300,
+        "sha256": "8dc08aa11d8acd600174cc74e9eef97a3fbcaaeab6d5095d7dad8629b5c357c6",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_drawer/CloseDrawer/2024-04-30/demo_gentex_im128_randcams.hdf5",
+      "size": 4366693852,
+      "lfs": {
+        "size": 4366693852,
+        "sha256": "a1d1f90ea4bfaac8130addff808fb4e96f7eb138d345e73cd106df21e8e2dd43",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_drawer/OpenDrawer/2024-05-03/demo_gentex_im128_randcams.hdf5",
+      "size": 4835802356,
+      "lfs": {
+        "size": 4835802356,
+        "sha256": "4dac44b3e61ba55026b24f51dda81b8175c8e4352dd27a5e571760f3693d675c",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_microwave/TurnOffMicrowave/2024-04-25/demo_gentex_im128_randcams.hdf5",
+      "size": 5087838386,
+      "lfs": {
+        "size": 5087838386,
+        "sha256": "14177130cbf02aa95c89e32db4c5d7cd990fd231b12cc021ff2239c267e4f885",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_microwave/TurnOnMicrowave/2024-04-25/demo_gentex_im128_randcams.hdf5",
+      "size": 5082648342,
+      "lfs": {
+        "size": 5082648342,
+        "sha256": "ac0eba36e12c98006e028da75ae46f212b938ab11d84a11acd1fdbcb229b8c53",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPCabToCounter/2024-04-24/demo_gentex_im128_randcams.hdf5",
+      "size": 7084219690,
+      "lfs": {
+        "size": 7084219690,
+        "sha256": "92e4e0c84c5d4cf4567680dd8e5312d9995d41d7a73370e1a93911c9642ff7e9",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPCounterToCab/2024-04-24/demo_gentex_im128_randcams.hdf5",
+      "size": 5720205858,
+      "lfs": {
+        "size": 5720205858,
+        "sha256": "119d447eb487a67d87dadad1b2c00cd4ae96f29c29047890201c08e0a7a1355b",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPCounterToMicrowave/2024-04-27/demo_gentex_im128_randcams.hdf5",
+      "size": 9028180643,
+      "lfs": {
+        "size": 9028180643,
+        "sha256": "203a2ed4d9033f9b48daf434b0124a81da6e2552c0adf9ae7f5021dd19012662",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPCounterToSink/2024-04-25/demo_gentex_im128_randcams.hdf5",
+      "size": 9546011202,
+      "lfs": {
+        "size": 9546011202,
+        "sha256": "7229cb09a76851d1c970ccebe0d84be7b9dd2954de3b92c3d72ac77367f91ee4",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPCounterToStove/2024-04-26/demo_gentex_im128_randcams.hdf5",
+      "size": 6418217926,
+      "lfs": {
+        "size": 6418217926,
+        "sha256": "41d9246c66323d55610bc84248560796b5848c619fc6ac367679786f7c8f716a",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPMicrowaveToCounter/2024-04-26/demo_gentex_im128_randcams.hdf5",
+      "size": 6642591398,
+      "lfs": {
+        "size": 6642591398,
+        "sha256": "9fd3eb2c4a184528c78920a6f3c0c2a27cf143d423eb5494ece8acaf37e8aa31",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPSinkToCounter/2024-04-26_2/demo_gentex_im128_randcams.hdf5",
+      "size": 6117302494,
+      "lfs": {
+        "size": 6117302494,
+        "sha256": "1ee47719ab6f4188ce6c9b22518ce675a3e248ffb7be5c35d5cd0de2eaa7e0bb",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_pnp/PnPStoveToCounter/2024-05-01/demo_gentex_im128_randcams.hdf5",
+      "size": 6115858118,
+      "lfs": {
+        "size": 6115858118,
+        "sha256": "285cac2154998576ac6d795bb94d8c62e5bf3ee3d6967f518dbfbd0c420910a7",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_sink/TurnOffSinkFaucet/2024-04-25/demo_gentex_im128_randcams.hdf5",
+      "size": 3971824276,
+      "lfs": {
+        "size": 3971824276,
+        "sha256": "c5ca3b29d0e5210318acaf3531a209365f92cb49984334703f6acdb9b68550a9",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_sink/TurnOnSinkFaucet/2024-04-25/demo_gentex_im128_randcams.hdf5",
+      "size": 3715197790,
+      "lfs": {
+        "size": 3715197790,
+        "sha256": "c2ff720eb9514549b4e0986b2a9b8e7af70ab06d3b77bfc6788e5e7fb8276139",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_sink/TurnSinkSpout/2024-04-29/demo_gentex_im128_randcams.hdf5",
+      "size": 2615460156,
+      "lfs": {
+        "size": 2615460156,
+        "sha256": "63231bb0765e4dd74a55d197e62e258aef3b0ef16857df00468224ebeabd4e6c",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_stove/TurnOffStove/2024-05-02/demo_gentex_im128_randcams.hdf5",
+      "size": 2724351090,
+      "lfs": {
+        "size": 2724351090,
+        "sha256": "551bd6d662407e25e5f5cdecbfdbcad9a5df66310ce5662df34b9d0884231e18",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/kitchen_stove/TurnOnStove/2024-05-02/demo_gentex_im128_randcams.hdf5",
+      "size": 3294138014,
+      "lfs": {
+        "size": 3294138014,
+        "sha256": "6e8d211d8d4f3d122ca80b005b757796773e6dee7f3151db9019a655a7a26a9a",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "success_only/reason1_embeddings.pkl",
+      "size": 24868118400,
+      "lfs": {
+        "size": 24868118400,
+        "sha256": "48284fe857e8cc7e0131534f1e5517e18abeaf39f561da220dcf982cf5ef8a6c",
+        "pointer_size": 136
+      }
+    },
+    {
+      "path": "success_only/t5_embeddings.pkl",
+      "size": 463599495,
+      "lfs": {
+        "size": 463599495,
+        "sha256": "d7f067f0c2c8480e6a400fc1ad3cef87c6c8d42f252169dc537fb6d03f5a68fc",
+        "pointer_size": 134
+      }
+    }
+  ]
+}

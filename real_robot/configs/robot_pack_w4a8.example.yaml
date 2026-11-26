@@ -1,0 +1,35 @@
+wam:
+  ckpt: checkpoints/pack_w4a8/deployment.pt
+  dataset_stats: assets/stats/pack/dataset_stats.json
+  train_config: configs/train_config_joint_pack3_infer.yaml
+  device: cuda:0
+  mixed_precision: bf16
+  prompt: Put the three objects on the table into the container.
+  context_cache: assets/text_embeds/pack/ad085ca9b81861e511916a552aef91b865cb6b0b0c6e2c7c3d7db8629eab5ba3.t5_len128.wan22ti2v5b.pt
+  use_text_encoder: false
+  action_horizon: 32
+  num_inference_steps: 10
+  seed: 42
+  rand_device: cpu
+  num_video_frames: 9
+  version1:
+    enabled: false
+  quantization:
+    backend: cutlass_w4a8
+    task: pack
+    deployment_sha256: 4e3b7ff923623117d394d267243e1bb62f3027f5920ad5413754129e8dcc95b8
+    fastwam_root: third_party/FastWAM
+    fastwam_revision: 45d8e1458921d83f8ad6cf9ce993d371208dabd0
+    cuda_graph: true
+    runtime_profile: configs/real_robot_w4a8_runtime.json
+    # Optional: reuse an already compiled extension instead of building it.
+    # extension: /absolute/path/to/fastwam_steerquant_cutlass_w4a8_sm89_shape_v3.so
+
+policy_server:
+  host: 127.0.0.1
+  port: 18765
+  authkey: ${oc.env:FASTWAM_AUTHKEY}
+
+runtime:
+  action_chunk_size: 32
+  rospy_rate: 40

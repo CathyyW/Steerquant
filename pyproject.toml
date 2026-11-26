@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steerquant"
+version = "0.1.0"
+description = "Action-sensitivity-guided W4A8/W4A4 quantization for Cosmos Policy"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10,<3.11"
+dependencies = ["torch>=2.7,<2.8", "numpy>=1.26,<3", "h5py", "pillow", "einops", "filelock", "ninja", "requests>=2.32,<3"]
+
+[project.scripts]
+steerquant-calibrate = "steerquant.calibrate:main"
+steerquant-evaluate = "steerquant.evaluate:main"
+steerquant-prepare-calibration = "steerquant.prepare_calibration:main"
+steerquant-evaluate-robocasa = "steerquant.evaluate_robocasa:main"
+steerquant-prepare-robocasa-calibration = "steerquant.prepare_robocasa_calibration:main"
+steerquant-build = "steerquant.build:main"
+
+[tool.setuptools.packages.find]
+include = ["steerquant*"]
+
+[tool.setuptools.package-data]
+steerquant = ["data/*.json", "kernels/*/csrc/*.cpp", "kernels/*/csrc/*.cu", "kernels/*/csrc/*.h", "kernels/*/csrc/LICENSE*", "kernels/*/csrc/AUTHORS*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
