@@ -34,8 +34,8 @@ All results in our main success-rate and efficiency tables were obtained on NVID
 sudo apt-get install git build-essential python3.10-dev python3.10-venv libegl1 libgl1 libglib2.0-0
 
 # Clone the repository
-git clone https://github.com/CathyyW/SteerQuant-copy.git
-cd SteerQuant-copy
+git clone https://github.com/CathyyW/Steerquant.git
+cd Steerquant
 ```
 
 Use separate environments for LIBERO and RoboCasa. Activate the corresponding
