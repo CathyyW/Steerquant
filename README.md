@@ -1,8 +1,22 @@
 <h1 align="center">⎈ SteerQuant: Steering Quantization Error with Action-Guided Scaling in World–Action Models</h1>
 
-<h3 align="center">
-  Explore more on our <a href="https://cathyyw.github.io/Steerquant-Website/">Project Page</a>!
-</h3>
+<h3 align="center">Steer the error. <em>Keep actions on course.</em></h3>
+
+<p align="center">
+  Yunhan Wang<sup>1,2,*</sup>, Haodong Wang<sup>2,*</sup>, Zhiming Liu<sup>3</sup>, Zicong Hong<sup>4</sup>, Qianli Liu<sup>2</sup>,<br>
+  Xiaoyi Pang<sup>2</sup>, Yangjia Hu<sup>2</sup>, Quanxin Shou<sup>2</sup>, Yikun Miao<sup>2</sup>, Song Guo<sup>2</sup>
+</p>
+
+<p align="center">
+  <sup>1</sup> Tongji &nbsp; · &nbsp; <sup>2</sup> HKUST &nbsp; · &nbsp; <sup>3</sup> HIT &nbsp; · &nbsp; <sup>4</sup> EPFL<br>
+  <sup>*</sup> Equal contribution
+</p>
+
+<p align="center">
+  <a href="https://cathyyw.github.io/Steerquant-Website/"><img src="https://img.shields.io/badge/Project_Page-0B7285?style=flat&amp;logo=safari&amp;logoColor=white" alt="Project Page" height="32"></a>
+  &nbsp;
+  <a href="https://arxiv.org/abs/2609.39056"><img src="https://img.shields.io/badge/arXiv-2609.39056-243B53?style=flat&amp;logo=arxiv&amp;logoColor=white&amp;labelColor=162A40" alt="arXiv 2609.39056" height="32"></a>
+</p>
 
 <p align="center">
   <a href="#overview">Overview</a> ·
