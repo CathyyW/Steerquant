@@ -10,7 +10,7 @@ Visit our [project website](https://cathyyw.github.io/Steerquant-Website/) to se
 a C++ compiler, Git, and Git LFS.
 
 ```bash
-cd SteerQuant-copy/real_robot
+cd Steerquant/real_robot
 
 python3.10 -m venv .venv
 source .venv/bin/activate
