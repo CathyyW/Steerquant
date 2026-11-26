@@ -1,8 +1,8 @@
 <h1 align="center">⎈ SteerQuant: Steering Quantization Error with Action-Guided Scaling in World–Action Models</h1>
 
-<p align="center">
-  <a href="https://cathyyw.github.io/Steerquant-Website/">Project Page</a>
-</p>
+<h3 align="center">
+  Explore more on our <a href="https://cathyyw.github.io/Steerquant-Website/">Project Page</a>!
+</h3>
 
 <p align="center">
   <a href="#overview">Overview</a> ·
